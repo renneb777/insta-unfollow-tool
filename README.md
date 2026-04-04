@@ -72,7 +72,7 @@ Este aplicativo é uma ferramenta de terceiros, construída com o objetivo de es
   </a>
 </p>
 <p align="left">
- <img src="https://avatars.githubusercontent.com/u/105081358?v=4" alt="Foto do Desenvolvedor" width="100" style="border-radius: 80%;">
+ <img src="" alt="Foto do Desenvolvedor" width="100" style="border-radius: 80%;">
 </p>
 <p align="left">
   <em>Inovando com Kotlin e UX Nativa.</em>
