@@ -72,8 +72,5 @@ Este aplicativo é uma ferramenta de terceiros, construída com o objetivo de es
   </a>
 </p>
 <p align="left">
- <img src="" alt="Foto do Desenvolvedor" width="100" style="border-radius: 80%;">
-</p>
-<p align="left">
   <em>Inovando com Kotlin e UX Nativa.</em>
 </p>
