@@ -37,9 +37,9 @@ Este app foi construído com foco em **velocidade**, **segurança** e **experiê
 *(Adicione suas screenshots na pasta `/assets` e substitua os links abaixo)*
 
 <p align="center">
-  <img src="/assets/login.png" width="30%" alt="Tela de Login do Instagram">
-  <img src="/assets/analise.png" width="30%" alt="Lista de Análise e Estatísticas">
-  <img src="/assets/unfollow.png" width="30%" alt="Modal de Unfollow e Anti-Ban">
+  <img src="/assets/login.jpeg" width="30%" alt="Tela de Login do Instagram">
+  <img src="/assets/analise.jpeg" width="30%" alt="Lista de Análise e Estatísticas">
+  <img src="/assets/unfollow.jpeg" width="30%" alt="Modal de Unfollow e Anti-Ban">
 </p>
 
 ## ⚙️ Arquitetura e Stack Técnica
