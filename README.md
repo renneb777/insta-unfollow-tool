@@ -66,13 +66,13 @@ Este aplicativo é uma ferramenta de terceiros, construída com o objetivo de es
 ---
 ### 🤝 Desenvolvido por
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/renneb777" target="_blank">
     <strong>Renne B.</strong> (Sistemas de Informação)
   </a>
 </p>
-<p align="center">
-  <img src="https://avatars.githubusercontent.com/u/105081358?v=4" alt="Foto do Desenvolvedor" width="100" style="border-radius:50%">
+<p align="left">
+ <img src="https://avatars.githubusercontent.com/u/105081358?v=4" alt="Foto do Desenvolvedor" width="100" style="border-radius: 50%;">
 </p>
 <p align="center">
   <em>Inovando com Kotlin e UX Nativa.</em>
