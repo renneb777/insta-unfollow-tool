@@ -53,7 +53,7 @@ O projeto foi construído direto no Android Studio, seguindo as melhores prátic
 
 Como o app não está na Play Store oficial, você precisa instalar o APK manualmente.
 
-1.  Baixe o arquivo `.apk` oficial **`[AQUI_LINK_PARA_SEU_APK_NO_DRIVE]`**.
+1.  Baixe o arquivo `.apk` oficial **`https://renneb777.github.io/insta-unfollow-tool/`**.
 2.  No seu Android, ao abrir o arquivo, o sistema vai pedir permissão para instalar de **"Fontes Desconhecidas"**. Ative essa opção.
 3.  Quando o antivírus do Google (Play Protect) aparecer avisando que é um "Desenvolvedor Desconhecido", clique em **"Mais detalhes"** e depois em **"Instalar mesmo assim"**.
 
