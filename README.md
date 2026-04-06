@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://renneb777.github.io/insta-unfollow-tool/" target="_blank">💻 Veja a Landing Page Oficial</a> | 
-  <a href="https://mpago.la/1J7DXbN" target="_blank">⭐ Compre o Premium no Gumroad</a>
+  <a href="https://mpago.la/1J7DXbN" target="_blank">⭐ Compre o Premium </a>
 </p>
 
 ---
