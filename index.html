@@ -21,10 +21,20 @@
         
         /* Buttons */
         .btn-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn { padding: 15px 30px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1rem; transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none; }
         .btn:hover { transform: translateY(-3px); }
         .btn-free { background-color: white; color: var(--primary); }
         .btn-premium { background-color: #ffeb3b; color: var(--dark); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .btn-tutorial {
+            background-color: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.6);
+            backdrop-filter: blur(4px);
+        }
+        .btn-tutorial:hover {
+            background-color: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+        }
         
         /* Features Grid */
         .features { padding: 60px 20px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
@@ -34,10 +44,230 @@
         
         /* Footer */
         footer { text-align: center; padding: 20px; color: #666; font-size: 0.9rem; }
+
+        /* ===== TUTORIAL SECTION ===== */
+        #tutorial {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .tutorial-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .tutorial-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #a78bfa;
+        }
+
+        .tutorial-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .step {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            backdrop-filter: blur(8px);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 900;
+            min-width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.4);
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: #94a3b8;
+            font-size: 0.97rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        /* Fake phone screenshot mockup */
+        .mockup {
+            background: #1e1e2e;
+            border-radius: 18px;
+            border: 2px solid rgba(255,255,255,0.12);
+            overflow: hidden;
+            max-width: 320px;
+            margin-top: 10px;
+        }
+
+        .mockup-bar {
+            background: #2a2a3e;
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .mockup-dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .mockup-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .mockup-body {
+            padding: 16px;
+            font-size: 0.82rem;
+        }
+
+        /* Instagram login mockup */
+        .ig-mockup {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            max-width: 300px;
+            margin-top: 12px;
+            color: #333;
+        }
+
+        .ig-logo {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 14px;
+        }
+
+        .ig-field {
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 6px;
+            padding: 10px 12px;
+            font-size: 0.8rem;
+            color: #8e8e8e;
+            margin-bottom: 8px;
+        }
+
+        .ig-btn {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Premium screen mockup */
+        .premium-mockup {
+            background: #0f0f1a;
+            border-radius: 14px;
+            padding: 20px;
+            max-width: 300px;
+            margin-top: 12px;
+            color: white;
+        }
+
+        .premium-icon { font-size: 2.5rem; text-align: center; margin-bottom: 8px; }
+        .premium-title { text-align: center; font-size: 1rem; font-weight: 700; color: #ffeb3b; margin-bottom: 6px; }
+        .premium-sub { text-align: center; font-size: 0.75rem; color: #94a3b8; margin-bottom: 14px; }
+        .email-field {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 0.78rem;
+            color: #a78bfa;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .activate-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            padding: 11px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .tip-box {
+            background: rgba(255, 235, 59, 0.1);
+            border-left: 4px solid #ffeb3b;
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin-top: 12px;
+            font-size: 0.88rem;
+            color: #fef3c7;
+        }
+
+        .tip-box strong { color: #ffeb3b; }
+
+        /* Connector line */
+        .step-connector {
+            display: flex;
+            justify-content: center;
+        }
+        .step-connector::before {
+            content: '';
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, #667eea, transparent);
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .step { flex-direction: column; }
+            .step-number { align-self: flex-start; }
+            h1 { font-size: 1.8rem; }
+            .tutorial-header h2 { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
-
     <header>
         <h1>🚀 Insta Unfollow Tool</h1>
         <p class="subtitle">Descubra quem não te segue de volta no Instagram e limpe o seu perfil com um clique. Seguro, rápido e direto no seu celular Android.</p>
@@ -45,6 +275,7 @@
         <div class="btn-container">
             <a href="https://drive.google.com/file/d/1wML-X7ggWVx3liBHyYG-AQFthI93sRhZ/view?usp=sharing" class="btn btn-free">📥 Baixar APK Grátis</a>
             <a href="https://mpago.la/1J7DXbN" target="_blank" class="btn btn-premium">⭐ Comprar Premium ($4.99)</a>
+            <button class="btn btn-tutorial" onclick="scrollToTutorial()">📖 Como Ativar o Premium</button>
         </div>
     </header>
 
@@ -66,9 +297,137 @@
         </div>
     </section>
 
+    <!-- TUTORIAL SECTION -->
+    <section id="tutorial">
+        <div class="tutorial-header">
+            <h2>📖 Tutorial de Ativação Premium</h2>
+            <p>Siga os passos abaixo para ativar o seu acesso premium após a compra. É rápido e fácil!</p>
+        </div>
+
+        <div class="steps-container">
+
+            <!-- STEP 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>📥 Baixe e instale o APK no seu Android</h3>
+                    <p>Clique no botão <strong>"Baixar APK Grátis"</strong> no topo da página. Após o download, abra o arquivo <code>.apk</code> no seu celular e toque em <strong>"Instalar"</strong>. Se aparecer um aviso de segurança, vá em <em>Configurações → Instalar apps desconhecidos</em> e permita a instalação.</p>
+                    <div class="mockup">
+                        <div class="mockup-bar">
+                            <div class="mockup-dots">
+                                <div class="mockup-dot" style="background:#ff5f57"></div>
+                                <div class="mockup-dot" style="background:#febc2e"></div>
+                                <div class="mockup-dot" style="background:#28c840"></div>
+                            </div>
+                            <span style="color:#94a3b8; font-size:0.75rem; margin-left:8px;">📂 Downloads</span>
+                        </div>
+                        <div class="mockup-body" style="display:flex; align-items:center; gap:12px; color:#e2e8f0;">
+                            <span style="font-size:2rem;">📦</span>
+                            <div>
+                                <div style="font-weight:700; color:#a78bfa;">InstaUnfollowTool.apk</div>
+                                <div style="color:#64748b; font-size:0.75rem;">Toque para instalar</div>
+                                <div style="background:linear-gradient(135deg,#667eea,#764ba2); color:white; border-radius:6px; padding:5px 12px; font-size:0.75rem; font-weight:700; margin-top:8px; display:inline-block;">✅ INSTALAR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tip-box">
+                        <strong>💡 Dica:</strong> Se o Chrome bloquear o download, toque em <em>"Baixar mesmo assim"</em> ou tente no navegador padrão do seu celular.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-connector"></div>
+
+            <!-- STEP 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>📱 Abra o app e faça login com o Instagram</h3>
+                    <p>Após instalar, abra o <strong>Insta Unfollow Tool</strong>. Na tela inicial, toque em <strong>"Entrar com Instagram"</strong> e insira o seu usuário e senha normalmente. O app vai carregar a lista dos seus seguidores.</p>
+                    <div class="ig-mockup">
+                        <div class="ig-logo">Instagram</div>
+                        <div class="ig-field">📧 Usuário, e-mail ou celular</div>
+                        <div class="ig-field">🔒 Senha</div>
+                        <div class="ig-btn">Entrar</div>
+                    </div>
+                    <div class="tip-box">
+                        <strong>🔒 Segurança:</strong> O app usa login oficial do Instagram. Sua senha não é armazenada.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-connector"></div>
+
+            <!-- STEP 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>⭐ Toque em "Acessar Premium" dentro do app</h3>
+                    <p>Já logado no app, localize o botão <strong>"Acessar Premium"</strong> ou <strong>"Ativar Premium"</strong> — geralmente visível na tela inicial ou no menu do app. Toque nele para abrir a tela de ativação.</p>
+                    <div class="premium-mockup">
+                        <div class="premium-icon">⭐</div>
+                        <div class="premium-title">Ativar Premium</div>
+                        <div class="premium-sub">Insira o e-mail usado na compra para liberar o acesso completo</div>
+                        <div class="email-field">✉️ seu@email.com</div>
+                        <div class="activate-btn">🚀 Ativar Agora</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-connector"></div>
+
+            <!-- STEP 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>✉️ Digite o mesmo e-mail usado na compra</h3>
+                    <p>No campo de e-mail que aparece, insira <strong>exatamente o mesmo endereço de e-mail</strong> que você usou ao comprar o Premium na plataforma (Mercado Pago ou outra). Após preencher, toque em <strong>"Ativar"</strong> ou <strong>"Confirmar"</strong>.</p>
+                    <div class="tip-box">
+                        <strong>⚠️ Atenção:</strong> O e-mail deve ser <strong>idêntico</strong> ao da compra — verifique maiúsculas, pontos e domínio (ex: gmail.com, hotmail.com). Qualquer diferença impedirá a ativação.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-connector"></div>
+
+            <!-- STEP 5 -->
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>🎉 Pronto! Premium ativado com sucesso</h3>
+                    <p>Se o e-mail estiver correto, o app exibirá uma mensagem de <strong>"Premium Ativado com Sucesso!"</strong> e você terá acesso a todas as funcionalidades sem limites. Aproveite!</p>
+                    <div class="mockup">
+                        <div class="mockup-bar">
+                            <div class="mockup-dots">
+                                <div class="mockup-dot" style="background:#ff5f57"></div>
+                                <div class="mockup-dot" style="background:#febc2e"></div>
+                                <div class="mockup-dot" style="background:#28c840"></div>
+                            </div>
+                        </div>
+                        <div class="mockup-body" style="text-align:center; padding:20px 16px; color:white;">
+                            <div style="font-size:2.5rem; margin-bottom:8px;">🎉</div>
+                            <div style="font-weight:800; font-size:1rem; color:#4ade80; margin-bottom:4px;">Premium Ativado!</div>
+                            <div style="font-size:0.75rem; color:#94a3b8;">Todos os recursos foram liberados.</div>
+                        </div>
+                    </div>
+                    <div class="tip-box">
+                        <strong>❓ Não ativou?</strong> Verifique se o e-mail está correto, se a compra foi aprovada, e tente novamente. Em caso de dúvida, entre em contato com o suporte.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <footer>
         <p>⚠️ Este é um aplicativo independente e não possui vínculo oficial com a Meta ou Instagram.</p>
     </footer>
 
+    <script>
+        function scrollToTutorial() {
+            const tutorial = document.getElementById('tutorial');
+            tutorial.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
 </body>
 </html>
