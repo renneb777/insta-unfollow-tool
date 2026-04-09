@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://renneb777.github.io/insta-unfollow-tool/" target="_blank">💻 Veja a Landing Page Oficial</a> | 
-  <a href="https://mega.nz/file/hFwQ2AYT#Blk-VJT2zArYkyOtJUKt01w9CUWlmgmwdSbeYfeVshs" target="_blank">⭐ Baixe Apk para Ativar Premium </a>
+  <a href="https://mega.nz/file/ZVJDDLKb#Y3N_jU2v9V1X7ad_tHTXkqP0kBBrYkSOv66QfAWZOlw" target="_blank">⭐ Baixe Apk para Ativar Premium </a>
 </p>
 
 ---
