@@ -21,14 +21,12 @@
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
 
-/* NAV */
 .navbar{background:rgba(9,9,15,0.9)!important;backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:16px 0}
 .navbar-brand{font-weight:800;font-size:1.15rem;color:#fff!important;letter-spacing:-.01em}
 .navbar-brand span{color:var(--accent)}
 .nav-cta{background:linear-gradient(135deg,#9d7cff,#c084fc);color:#fff!important;padding:9px 24px!important;border-radius:100px;font-weight:600;font-size:0.88rem;transition:.2s}
 .nav-cta:hover{opacity:.85;transform:translateY(-1px)}
 
-/* HERO */
 .hero-section{padding:90px 0 70px;position:relative;overflow:hidden}
 .hero-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(157,124,255,0.11) 0%,transparent 70%);pointer-events:none}
 .badge-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(157,124,255,0.1);border:1px solid rgba(157,124,255,0.28);color:#c4b5fd;padding:6px 18px;border-radius:100px;font-size:0.8rem;font-weight:600;letter-spacing:.04em;margin-bottom:26px}
@@ -39,14 +37,12 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .btn-outline-custom{color:var(--text);padding:14px 32px;border-radius:100px;font-size:0.97rem;font-weight:600;text-decoration:none;border:1px solid var(--border);display:inline-block;transition:.2s;background:transparent}
 .btn-outline-custom:hover{border-color:rgba(255,255,255,0.22);background:rgba(255,255,255,0.04);color:var(--text)}
 
-/* STATS ROW */
 .stats-row{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--card);margin-top:52px}
 .stat-item{padding:22px 28px;border-right:1px solid var(--border)}
 .stat-item:last-child{border-right:none}
 .stat-num{font-size:1.75rem;font-weight:800;background:linear-gradient(135deg,#fff,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
 .stat-desc{color:var(--muted);font-size:0.78rem;font-weight:500;margin-top:3px;letter-spacing:.02em}
 
-/* FEATURES */
 .section-tag{font-size:0.75rem;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
 .section-heading{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:0}
 .feat-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px 28px;height:100%;transition:.25s}
@@ -55,7 +51,19 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .feat-card h5{font-weight:700;font-size:1rem;margin-bottom:10px;color:var(--text)}
 .feat-card p{color:var(--muted);font-size:0.9rem;margin:0;line-height:1.68}
 
-/* TUTORIAL */
+/* QR SECTION */
+.qr-section{padding:80px 0;background:var(--bg)}
+.qr-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:48px 40px;position:relative;overflow:hidden}
+.qr-card::before{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;background:radial-gradient(circle,rgba(157,124,255,0.09) 0%,transparent 70%);pointer-events:none}
+.qr-frame{background:#fff;border-radius:18px;padding:14px;display:inline-block;box-shadow:0 0 0 1px rgba(255,255,255,0.1),0 20px 60px rgba(157,124,255,0.18)}
+.qr-frame img{display:block;width:180px;height:180px;border-radius:8px}
+.qr-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.25);color:#34d399;padding:5px 14px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-bottom:18px}
+.qr-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:14px}
+.qr-desc{color:var(--muted);font-size:0.95rem;line-height:1.7;margin-bottom:28px;max-width:380px}
+.qr-steps{display:flex;flex-direction:column;gap:12px}
+.qr-step{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:0.88rem}
+.qr-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#9d7cff,#c084fc);flex-shrink:0}
+
 .tutorial-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .step-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:30px;margin-bottom:18px;display:flex;gap:22px;align-items:flex-start;transition:.2s}
 .step-card:hover{border-color:rgba(157,124,255,0.28);transform:translateX(4px)}
@@ -64,8 +72,6 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .step-content p{color:var(--muted);font-size:0.9rem;margin:0;line-height:1.66}
 .tip-box{background:rgba(249,201,70,0.07);border:1px solid rgba(249,201,70,0.2);border-radius:10px;padding:11px 15px;margin-top:14px;font-size:0.84rem;color:rgba(249,201,70,0.9);line-height:1.55}
 .tip-box strong{color:var(--gold)}
-
-/* MOCKUPS */
 .mockup-wrap{background:#0b0b14;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;max-width:270px;margin-top:16px}
 .mockup-bar{background:#111122;padding:9px 13px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
 .dot-r{width:9px;height:9px;border-radius:50%;background:#ff5f57}
@@ -79,14 +85,13 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .prem-card-m{background:#080814;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px;max-width:240px;margin-top:14px;text-align:center}
 .success-card-m{background:#060e0a;border:1px solid rgba(52,211,153,0.22);border-radius:14px;padding:26px 18px;max-width:240px;margin-top:14px;text-align:center}
 .success-ring-m{width:52px;height:52px;border-radius:50%;background:rgba(52,211,153,0.1);border:2px solid rgba(52,211,153,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.4rem}
-
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:36px 0;text-align:center;color:var(--muted);font-size:0.85rem}
-
 @media(max-width:576px){
   .stat-item{border-right:none;border-bottom:1px solid var(--border)}
   .stat-item:last-child{border-bottom:none}
-  .stats-row{border-radius:16px}
+  .qr-card{padding:32px 22px}
+  .qr-frame img{width:150px;height:150px}
+  .qr-desc{max-width:100%}
 }
 </style>
 </head>
@@ -150,6 +155,32 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:36px 0;te
           <div class="feat-icon-wrap">⭐</div>
           <h5>Whitelist — Proteção</h5>
           <p>Adicione uma estrela nos perfis que quer manter seguindo. O app nunca dará unfollow neles, mesmo em modo automático.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QR CODE SECTION -->
+<section class="qr-section">
+  <div class="container">
+    <div class="qr-card">
+      <div class="row align-items-center g-5">
+        <div class="col-md-5 text-center">
+          <div class="qr-frame">
+            <img src="/assets/QRAPP.png" alt="QR Code para baixar o APK">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="qr-badge">✦ Download Rápido</div>
+          <h2 class="qr-title">Aponte a câmera e baixe na hora</h2>
+          <p class="qr-desc">Sem precisar digitar nada. Escaneie o QR Code com a câmera do seu celular Android e o download começa automaticamente.</p>
+          <div class="qr-steps">
+            <div class="qr-step"><div class="qr-dot"></div><span>Abra a câmera do celular</span></div>
+            <div class="qr-step"><div class="qr-dot"></div><span>Aponte para o QR Code acima</span></div>
+            <div class="qr-step"><div class="qr-dot"></div><span>Toque na notificação que aparecer</span></div>
+            <div class="qr-step"><div class="qr-dot"></div><span>Instale e aproveite!</span></div>
+          </div>
         </div>
       </div>
     </div>
