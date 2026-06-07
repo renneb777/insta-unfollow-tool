@@ -35,7 +35,7 @@ Este app foi construído com foco em **velocidade**, **segurança** e **experiê
 ## 📸 Guia Visual do Aplicativo
 
 <p align="center">
-  <img src="/assets/login.jpeg" width="20%" alt="Tela de Login do Instagram">
+  <img src="/assets/login.png" width="20%" alt="Tela de Login do Instagram">
   <img src="/assets/analise.jpeg" width="20%" alt="Lista de Análise e Estatísticas">
   <img src="/assets/unfollow.jpeg" width="20%" alt="Modal de Unfollow e Anti-Ban">
 </p>
