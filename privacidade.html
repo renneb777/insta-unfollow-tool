@@ -1,30 +1,332 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Política de Privacidade - Insta Unfollow Tool</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-    h1, h2 { color: #667eea; margin-top: 30px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Insta Unfollow Tool</title>
+    <link rel="icon" type="image/png" href="assets/logo_small.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#2e1065',
+                        },
+                        surface: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 8s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -40px) scale(1.08)' },
+                            '66%': { transform: 'translate(-25px, 25px) scale(0.95)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .insta-gradient-text {
+            background: linear-gradient(135deg, #f59e0b, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
-  <h1>Política de Privacidade</h1>
-  <p><strong>Última atualização:</strong> Abril de 2026</p>
 
-  <h2>1. Dados que coletamos</h2>
-  <p>A extensão <strong>Insta Unfollow Tool</strong> coleta e utiliza o seu endereço de e-mail exclusivamente caso você deseje ativar a versão Premium.</p>
+<body
+    class="bg-surface-950 text-surface-100 antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
-  <h2>2. Como usamos os seus dados</h2>
-  <p>O seu e-mail é utilizado apenas para consultar o nosso banco de dados seguro e validar se existe uma licença Premium ativa vinculada a ele. Nenhum outro dado pessoal é armazenado ou processado em nossos servidores.</p>
+    <!-- Ambient glowing backgrounds -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[550px] h-[550px] bg-brand-600/20 rounded-full filter blur-[130px] opacity-70 animate-blob">
+        </div>
+        <div class="absolute top-[25%] right-[-10%] w-[500px] h-[500px] bg-pink-600/15 rounded-full filter blur-[140px] opacity-60 animate-blob"
+            style="animation-delay: 2.5s"></div>
+        <div class="absolute bottom-[10%] left-[20%] w-[600px] h-[600px] bg-indigo-600/15 rounded-full filter blur-[150px] opacity-50 animate-blob"
+            style="animation-delay: 5s"></div>
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px); background-size: 32px 32px;">
+        </div>
+    </div>
 
-  <h2>3. Dados do Instagram</h2>
-  <p>A extensão lê as informações do seu perfil do Instagram (lista de Seguidores e Seguindo) de forma <strong>100% local</strong>, diretamente no seu navegador. Nenhum dado da sua conta do Instagram é enviado para servidores externos, salvo, ou compartilhado. Todo o processamento acontece apenas na sua máquina.</p>
+    <!-- STICKY TOP NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-white/10 transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
 
-  <h2>4. Compartilhamento de Dados</h2>
-  <p>Nós declaramos que <strong>não vendemos, não alugamos e não compartilhamos</strong> o seu endereço de e-mail ou qualquer outra informação com terceiros.</p>
+                <!-- Brand Logo & Title -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="relative">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-300">
+                        </div>
+                        <div
+                            class="relative w-10 h-10 rounded-xl bg-surface-900 border border-white/20 flex items-center justify-center p-1.5 shadow-lg">
+                            <img src="assets/logo_small.png" alt="Insta Unfollow Logo"
+                                class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="text-base sm:text-lg font-black tracking-tight text-white group-hover:text-brand-300 transition-colors">
+                                Insta Unfollow <span class="text-brand-400">Tool</span>
+                            </span>
+                            <span
+                                class="text-[10px] uppercase font-extrabold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 text-surface-950 px-2 py-0.5 rounded-full shadow-sm">
+                                PRO v5.5.6
+                            </span>
+                        </div>
+                        <p class="text-[11px] text-surface-400 hidden sm:block font-medium">Automação Inteligente &
+                            Segura para Instagram</p>
+                    </div>
+                </a>
 
-  <h2>5. Contato</h2>
-  <p>Se tiver dúvidas sobre esta política, entre em contato através do nosso repositório oficial no GitHub.</p>
+                <!-- Return Button -->
+                <div class="flex items-center gap-3">
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-surface-200 border border-white/10 text-xs sm:text-sm font-semibold transition active:scale-95">
+                        <i data-lucide="arrow-left" class="w-4 h-4 text-brand-300"></i>
+                        <span>Voltar ao Início</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10 flex-1 py-12 sm:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Breadcrumb & Badge -->
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+                <a href="index.html"
+                    class="text-xs font-semibold text-surface-400 hover:text-white transition-colors flex items-center gap-1">
+                    <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                    Início
+                </a>
+                <span class="text-surface-600 text-xs">/</span>
+                <span class="text-xs font-semibold text-brand-300">Privacidade</span>
+
+                <div
+                    class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-300 shadow-sm">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>Segurança & Transparência</span>
+                </div>
+            </div>
+
+            <!-- Page Title -->
+            <div class="mb-10 text-center sm:text-left">
+                <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-3">
+                    Política de Privacidade
+                </h1>
+                <p class="text-xs sm:text-sm text-surface-400 flex items-center justify-center sm:justify-start gap-1.5 font-medium">
+                    <i data-lucide="calendar" class="w-4 h-4 text-brand-400"></i>
+                    <span><strong>Última atualização:</strong> Abril de 2026</span>
+                </p>
+            </div>
+
+            <!-- Sections Container -->
+            <div class="space-y-6">
+
+                <!-- Section 1: Dados que coletamos -->
+                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-300 flex items-center justify-center flex-shrink-0 border border-brand-500/30 shadow-lg">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">1. Dados que coletamos</h2>
+                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                                A extensão <strong>Insta Unfollow Tool</strong> coleta e utiliza o seu endereço de e-mail exclusivamente caso você deseje ativar a versão Premium.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Como usamos os seus dados -->
+                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center flex-shrink-0 border border-indigo-500/30 shadow-lg">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">2. Como usamos os seus dados</h2>
+                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                                O seu e-mail é utilizado apenas para consultar o nosso banco de dados seguro e validar se existe uma licença Premium ativa vinculada a ele. Nenhum outro dado pessoal é armazenado ou processado em nossos servidores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Dados do Instagram -->
+                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                    <div class="flex items-start gap-4 relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/30 shadow-lg">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">3. Dados do Instagram</h2>
+                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                                A extensão lê as informações do seu perfil do Instagram (lista de Seguidores e Seguindo) de forma <strong>100% local</strong>, diretamente no seu navegador. Nenhum dado da sua conta do Instagram é enviado para servidores externos, salvo, ou compartilhado. Todo o processamento acontece apenas na sua máquina.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Compartilhamento de Dados -->
+                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-300 flex items-center justify-center flex-shrink-0 border border-pink-500/30 shadow-lg">
+                            <i data-lucide="lock" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">4. Compartilhamento de Dados</h2>
+                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                                Nós declaramos que <strong>não vendemos, não alugamos e não compartilhamos</strong> o seu endereço de e-mail ou qualquer outra informação com terceiros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Contato -->
+                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center flex-shrink-0 border border-amber-500/30 shadow-lg">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">5. Contato</h2>
+                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal mb-4">
+                                Se tiver dúvidas sobre esta política, entre em contato através do nosso repositório oficial no GitHub.
+                            </p>
+                            <a href="https://github.com/renneb777/insta-unfollow-tool" target="_blank"
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs sm:text-sm font-semibold transition active:scale-95">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>Acessar Repositório no GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-950 border-t border-white/10 py-12 px-4 relative z-10 text-surface-400 text-xs">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo_small.png" alt="Logo" class="w-8 h-8 object-contain">
+                    <div>
+                        <div class="text-sm font-extrabold text-white">Insta Unfollow Tool</div>
+                        <div class="text-[11px] text-surface-500">Desenvolvido com foco em velocidade e privacidade.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="hover:text-white transition-colors">Página Inicial</a>
+                    <a href="https://github.com/renneb777/insta-unfollow-tool" target="_blank"
+                        class="hover:text-white transition-colors flex items-center gap-1.5">
+                        <i data-lucide="github" class="w-4 h-4"></i>
+                        <span>GitHub Oficial</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div
+                class="border-t border-white/5 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left text-surface-500">
+                <p>© 2026 Insta Unfollow Tool. Todos os direitos reservados.</p>
+                <p class="text-[11px]">Independente e não afiliado ao Instagram™ ou Meta Platforms Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
