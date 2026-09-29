@@ -128,43 +128,44 @@
 
     <!-- STICKY TOP NAVBAR -->
     <nav class="sticky top-0 z-50 glass-panel border-b border-white/10 transition-all duration-300">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20">
+        <div class="max-w-5xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-14 sm:h-20 gap-2">
 
                 <!-- Brand Logo & Title -->
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="relative">
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
+                    <div class="relative flex-shrink-0">
                         <div
                             class="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-300">
                         </div>
                         <div
-                            class="relative w-10 h-10 rounded-xl bg-surface-900 border border-white/20 flex items-center justify-center p-1.5 shadow-lg">
+                            class="relative w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-surface-900 border border-white/20 flex items-center justify-center p-1 sm:p-1.5 shadow-lg">
                             <img src="assets/logo_small.png" alt="Insta Unfollow Logo"
                                 class="w-full h-full object-contain">
                         </div>
                     </div>
-                    <div>
-                        <div class="flex items-center gap-2">
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-1.5 sm:gap-2">
                             <span
-                                class="text-base sm:text-lg font-black tracking-tight text-white group-hover:text-brand-300 transition-colors">
+                                class="text-xs sm:text-base md:text-lg font-black tracking-tight text-white group-hover:text-brand-300 transition-colors truncate">
                                 Insta Unfollow <span class="text-brand-400">Tool</span>
                             </span>
                             <span
-                                class="text-[10px] uppercase font-extrabold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 text-surface-950 px-2 py-0.5 rounded-full shadow-sm">
+                                class="hidden min-[440px]:inline-block text-[9px] sm:text-[10px] uppercase font-extrabold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 text-surface-950 px-1.5 sm:px-2 py-0.5 rounded-full shadow-sm flex-shrink-0">
                                 PRO v5.5.6
                             </span>
                         </div>
-                        <p class="text-[11px] text-surface-400 hidden sm:block font-medium">Automação Inteligente &
+                        <p class="text-[11px] text-surface-400 hidden md:block font-medium">Automação Inteligente &
                             Segura para Instagram</p>
                     </div>
                 </a>
 
-                <!-- Return Button -->
-                <div class="flex items-center gap-3">
+                <!-- Return Button (Responsive for all phones: compact on <=360px, full on >=640px) -->
+                <div class="flex items-center flex-shrink-0">
                     <a href="index.html"
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-surface-200 border border-white/10 text-xs sm:text-sm font-semibold transition active:scale-95">
-                        <i data-lucide="arrow-left" class="w-4 h-4 text-brand-300"></i>
-                        <span>Voltar ao Início</span>
+                        class="inline-flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 text-surface-200 border border-white/10 text-xs sm:text-sm font-semibold transition active:scale-95 whitespace-nowrap">
+                        <i data-lucide="arrow-left" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-300"></i>
+                        <span class="inline">Voltar</span>
+                        <span class="hidden sm:inline">ao Início</span>
                     </a>
                 </div>
             </div>
@@ -172,21 +173,23 @@
     </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="relative z-10 flex-1 py-12 sm:py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main class="relative z-10 flex-1 py-8 sm:py-16">
+        <div class="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
 
             <!-- Breadcrumb & Badge -->
-            <div class="flex flex-wrap items-center gap-3 mb-6">
-                <a href="index.html"
-                    class="text-xs font-semibold text-surface-400 hover:text-white transition-colors flex items-center gap-1">
-                    <i data-lucide="home" class="w-3.5 h-3.5"></i>
-                    Início
-                </a>
-                <span class="text-surface-600 text-xs">/</span>
-                <span class="text-xs font-semibold text-brand-300">Privacidade</span>
+            <div class="flex flex-wrap items-center justify-between gap-2.5 mb-6 sm:mb-8">
+                <div class="flex items-center gap-1.5 text-xs font-semibold text-surface-400">
+                    <a href="index.html"
+                        class="hover:text-white transition-colors flex items-center gap-1">
+                        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                        Início
+                    </a>
+                    <span class="text-surface-600">/</span>
+                    <span class="text-brand-300">Privacidade</span>
+                </div>
 
                 <div
-                    class="ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-300 shadow-sm">
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] sm:text-xs font-semibold text-emerald-300 shadow-sm">
                     <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
                     <span>Segurança & Transparência</span>
                 </div>
@@ -204,17 +207,17 @@
             </div>
 
             <!-- Sections Container -->
-            <div class="space-y-6">
+            <div class="space-y-4 sm:space-y-6">
 
                 <!-- Section 1: Dados que coletamos -->
-                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-300 flex items-center justify-center flex-shrink-0 border border-brand-500/30 shadow-lg">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
+                <div class="glass-panel p-4 sm:p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-500/20 text-brand-300 flex items-center justify-center flex-shrink-0 border border-brand-500/30 shadow-lg">
+                            <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                         </div>
-                        <div class="flex-1">
-                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">1. Dados que coletamos</h2>
-                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-base sm:text-xl font-bold text-white mb-1.5 sm:mb-2">1. Dados que coletamos</h2>
+                            <p class="text-surface-300 text-xs sm:text-base leading-relaxed font-normal">
                                 A extensão <strong>Insta Unfollow Tool</strong> coleta e utiliza o seu endereço de e-mail exclusivamente caso você deseje ativar a versão Premium.
                             </p>
                         </div>
@@ -222,14 +225,14 @@
                 </div>
 
                 <!-- Section 2: Como usamos os seus dados -->
-                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center flex-shrink-0 border border-indigo-500/30 shadow-lg">
-                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                <div class="glass-panel p-4 sm:p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center flex-shrink-0 border border-indigo-500/30 shadow-lg">
+                            <i data-lucide="cpu" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                         </div>
-                        <div class="flex-1">
-                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">2. Como usamos os seus dados</h2>
-                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-base sm:text-xl font-bold text-white mb-1.5 sm:mb-2">2. Como usamos os seus dados</h2>
+                            <p class="text-surface-300 text-xs sm:text-base leading-relaxed font-normal">
                                 O seu e-mail é utilizado apenas para consultar o nosso banco de dados seguro e validar se existe uma licença Premium ativa vinculada a ele. Nenhum outro dado pessoal é armazenado ou processado em nossos servidores.
                             </p>
                         </div>
@@ -237,15 +240,15 @@
                 </div>
 
                 <!-- Section 3: Dados do Instagram -->
-                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-all duration-300 relative overflow-hidden">
+                <div class="glass-panel p-4 sm:p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute -right-16 -top-16 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                    <div class="flex items-start gap-4 relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/30 shadow-lg">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    <div class="flex items-start gap-3 sm:gap-4 relative z-10">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/30 shadow-lg">
+                            <i data-lucide="shield-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                         </div>
-                        <div class="flex-1">
-                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">3. Dados do Instagram</h2>
-                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-base sm:text-xl font-bold text-white mb-1.5 sm:mb-2">3. Dados do Instagram</h2>
+                            <p class="text-surface-300 text-xs sm:text-base leading-relaxed font-normal">
                                 A extensão lê as informações do seu perfil do Instagram (lista de Seguidores e Seguindo) de forma <strong>100% local</strong>, diretamente no seu navegador. Nenhum dado da sua conta do Instagram é enviado para servidores externos, salvo, ou compartilhado. Todo o processamento acontece apenas na sua máquina.
                             </p>
                         </div>
@@ -253,14 +256,14 @@
                 </div>
 
                 <!-- Section 4: Compartilhamento de Dados -->
-                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-pink-500/30 transition-all duration-300">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-300 flex items-center justify-center flex-shrink-0 border border-pink-500/30 shadow-lg">
-                            <i data-lucide="lock" class="w-6 h-6"></i>
+                <div class="glass-panel p-4 sm:p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-pink-500/20 text-pink-300 flex items-center justify-center flex-shrink-0 border border-pink-500/30 shadow-lg">
+                            <i data-lucide="lock" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                         </div>
-                        <div class="flex-1">
-                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">4. Compartilhamento de Dados</h2>
-                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-base sm:text-xl font-bold text-white mb-1.5 sm:mb-2">4. Compartilhamento de Dados</h2>
+                            <p class="text-surface-300 text-xs sm:text-base leading-relaxed font-normal">
                                 Nós declaramos que <strong>não vendemos, não alugamos e não compartilhamos</strong> o seu endereço de e-mail ou qualquer outra informação com terceiros.
                             </p>
                         </div>
@@ -268,18 +271,18 @@
                 </div>
 
                 <!-- Section 5: Contato -->
-                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center flex-shrink-0 border border-amber-500/30 shadow-lg">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                <div class="glass-panel p-4 sm:p-6 sm:p-8 rounded-2xl border border-white/10 hover:border-brand-500/30 transition-all duration-300">
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center flex-shrink-0 border border-amber-500/30 shadow-lg">
+                            <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                         </div>
-                        <div class="flex-1">
-                            <h2 class="text-lg sm:text-xl font-bold text-white mb-2">5. Contato</h2>
-                            <p class="text-surface-300 text-sm sm:text-base leading-relaxed font-normal mb-4">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-base sm:text-xl font-bold text-white mb-1.5 sm:mb-2">5. Contato</h2>
+                            <p class="text-surface-300 text-xs sm:text-base leading-relaxed font-normal mb-4">
                                 Se tiver dúvidas sobre esta política, entre em contato através do nosso repositório oficial no GitHub.
                             </p>
                             <a href="https://github.com/renneb777/insta-unfollow-tool" target="_blank"
-                                class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs sm:text-sm font-semibold transition active:scale-95">
+                                class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs sm:text-sm font-semibold transition active:scale-95">
                                 <i data-lucide="github" class="w-4 h-4"></i>
                                 <span>Acessar Repositório no GitHub</span>
                             </a>
