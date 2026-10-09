@@ -202,6 +202,38 @@
         .step-card:last-child .step-line::before {
             display: none;
         }
+
+        /* Prevenção de overflow horizontal e ajustes para dispositivos móveis */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /* Responsividade para celulares menores (Samsung A55, 384px, 360px e 320px) */
+        @media (max-width: 639px) {
+            .step-line::before {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 384px) {
+            .glass-panel {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+        }
+
+        @media (max-width: 340px) {
+            html {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
@@ -293,33 +325,33 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
             <!-- Security & Status Badges -->
-            <div class="flex flex-wrap justify-center items-center gap-2.5 mb-6">
+            <div class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2.5 mb-6">
                 <div
-                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-300 shadow-sm">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] sm:text-xs font-semibold text-emerald-300 shadow-sm text-center">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
                     <span>100% Seguro & Processamento Local</span>
                 </div>
                 <div
-                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-xs font-semibold text-brand-300 shadow-sm">
-                    <i data-lucide="zap" class="w-3.5 h-3.5 text-brand-400"></i>
+                    class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-[11px] sm:text-xs font-semibold text-brand-300 shadow-sm text-center">
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-brand-400 flex-shrink-0"></i>
                     <span>Escudo Anti-Ban Nativo</span>
                 </div>
                 <div
-                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-semibold text-amber-300 shadow-sm hidden sm:inline-flex">
-                    <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-400"></i>
+                    class="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-[11px] sm:text-xs font-semibold text-amber-300 shadow-sm hidden sm:inline-flex text-center">
+                    <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-400 flex-shrink-0"></i>
                     <span>Sem Senhas Armazenadas</span>
                 </div>
             </div>
 
             <!-- Main Headline -->
             <h1
-                class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
+                class="text-2xl min-[400px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.15] sm:leading-[1.1] mb-5 sm:mb-6 max-w-4xl mx-auto break-words">
                 Descubra quem <span class="insta-gradient-text">não te segue</span> de volta no Instagram.
             </h1>
 
             <!-- Subtitle -->
             <p
-                class="text-base sm:text-lg md:text-xl text-surface-300 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+                class="text-sm sm:text-lg md:text-xl text-surface-300 max-w-2xl mx-auto font-normal leading-relaxed mb-8 sm:mb-10 px-1">
                 Limpeza inteligente e precisa com <strong class="text-white font-semibold">cache ultrarrápido
                     (0.1s)</strong>, lista de proteção Whitelist e simulação de intervalos humanos contra bloqueios.
             </p>
@@ -335,10 +367,10 @@
                         </div>
                         <a href="https://mega.nz/file/JYxFTAgJ#alifBxNGX03xCnJHfHfMJIvQEJgh9qxpyv9xQC66E5U"
                             target="_blank" onclick="registrarDownload('android_apk', event)"
-                            class="relative flex items-center gap-3.5 p-4 bg-surface-900 border border-emerald-500/40 rounded-2xl hover:border-emerald-400 transition-all duration-300 active:scale-95 group-hover:shadow-[0_0_35px_rgba(16,185,129,0.3)] text-left">
+                            class="relative flex items-center gap-3.5 p-3.5 sm:p-4 bg-surface-900 border border-emerald-500/40 rounded-2xl hover:border-emerald-400 transition-all duration-300 active:scale-95 group-hover:shadow-[0_0_35px_rgba(16,185,129,0.3)] text-left">
                             <div
-                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center flex-shrink-0 shadow-lg text-white">
-                                <i data-lucide="smartphone" class="w-6 h-6"></i>
+                                class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center flex-shrink-0 shadow-lg text-white">
+                                <i data-lucide="smartphone" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <div class="flex items-center justify-between">
@@ -358,9 +390,9 @@
                     <!-- 2. GOOGLE CHROME EXTENSION -->
                     <a href="https://chromewebstore.google.com/detail/instagram-unfollow-tool/bhkbkoihfliaebnmdcchoejnaeejplmn"
                         target="_blank" onclick="registrarDownload('chrome_extension', event)"
-                        class="flex items-center gap-3.5 p-4 bg-surface-900/90 border border-white/10 rounded-2xl hover:border-brand-400 hover:bg-surface-800/90 transition-all duration-300 active:scale-95 text-left group">
+                        class="flex items-center gap-3.5 p-3.5 sm:p-4 bg-surface-900/90 border border-white/10 rounded-2xl hover:border-brand-400 hover:bg-surface-800/90 transition-all duration-300 active:scale-95 text-left group">
                         <div
-                            class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 p-2.5">
+                            class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 p-2 sm:p-2.5">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg"
                                 alt="Google Chrome" class="w-full h-full object-contain">
                         </div>
@@ -376,9 +408,9 @@
                     <!-- 3. MOZILLA FIREFOX ADDON -->
                     <a href="https://addons.mozilla.org/pt-BR/firefox/addon/instagram-unfollow-tool/" target="_blank"
                         onclick="registrarDownload('firefox_addon', event)"
-                        class="flex items-center gap-3.5 p-4 bg-surface-900/90 border border-white/10 rounded-2xl hover:border-orange-400 hover:bg-surface-800/90 transition-all duration-300 active:scale-95 text-left group">
+                        class="flex items-center gap-3.5 p-3.5 sm:p-4 bg-surface-900/90 border border-white/10 rounded-2xl hover:border-orange-400 hover:bg-surface-800/90 transition-all duration-300 active:scale-95 text-left group">
                         <div
-                            class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 p-2.5">
+                            class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 p-2 sm:p-2.5">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg"
                                 alt="Mozilla Firefox" class="w-full h-full object-contain">
                         </div>
@@ -394,30 +426,30 @@
                 </div>
 
                 <!-- Secondary Action Links -->
-                <div class="flex flex-wrap items-center justify-center gap-4 mt-4">
+                <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 mt-4">
                     <button onclick="abrirModalQR()"
-                        class="inline-flex items-center gap-2 text-xs font-semibold text-surface-300 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-xl border border-white/10 transition active:scale-95">
-                        <i data-lucide="smartphone" class="w-3.5 h-3.5 text-brand-400"></i>
+                        class="inline-flex items-center justify-center gap-2 text-xs font-semibold text-surface-300 hover:text-white bg-white/5 hover:bg-white/10 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-white/10 transition active:scale-95 w-full min-[480px]:w-auto">
+                        <i data-lucide="smartphone" class="w-3.5 h-3.5 text-brand-400 flex-shrink-0"></i>
                         <span>Escanear QR no Celular</span>
                     </button>
                     <a href="#processos"
-                        class="inline-flex items-center gap-2 text-xs font-semibold text-brand-300 hover:text-brand-200 bg-brand-500/10 hover:bg-brand-500/20 px-4 py-2 rounded-xl border border-brand-500/30 transition active:scale-95">
-                        <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+                        class="inline-flex items-center justify-center gap-2 text-xs font-semibold text-brand-300 hover:text-brand-200 bg-brand-500/10 hover:bg-brand-500/20 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-brand-500/30 transition active:scale-95 w-full min-[480px]:w-auto">
+                        <i data-lucide="help-circle" class="w-3.5 h-3.5 flex-shrink-0"></i>
                         <span>Tutorial Passo a Passo de Ativação</span>
                     </a>
                 </div>
             </div>
 
             <!-- LIVE REAL-TIME DOWNLOAD COUNTER CARD -->
-            <div class="relative inline-flex items-center justify-center z-10">
+            <div class="relative inline-flex items-center justify-center z-10 w-full max-w-full px-2">
                 <div id="counter-wrapper"
-                    class="relative inline-flex items-center gap-3.5 px-6 py-3 rounded-2xl glass-panel border border-white/15 shadow-2xl transition-all duration-300 hover:border-emerald-500/50">
+                    class="relative inline-flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-2xl glass-panel border border-white/15 shadow-2xl transition-all duration-300 hover:border-emerald-500/50 max-w-full text-center">
 
                     <!-- Floating +1 Particle Anchor -->
                     <div id="plus-one-container" class="absolute -top-3 right-6 pointer-events-none"></div>
 
                     <!-- User avatars stack -->
-                    <div class="flex -space-x-2">
+                    <div class="flex -space-x-2 flex-shrink-0">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop&crop=faces"
                             alt="Usuário 1" class="w-7 h-7 rounded-full border-2 border-surface-900 object-cover">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=faces"
@@ -430,33 +462,33 @@
                     </div>
 
                     <!-- Live Indicator & Counter -->
-                    <div class="flex items-center gap-2 text-sm text-surface-200">
-                        <span class="relative flex h-3 w-3">
+                    <div class="flex items-center gap-2 text-xs sm:text-sm text-surface-200">
+                        <span class="relative flex h-3 w-3 flex-shrink-0">
                             <span
                                 class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                         </span>
                         <span>Junte-se a <strong id="contador-downloads"
-                                class="text-white font-black text-base sm:text-lg tracking-wide text-emerald-400 mx-1 transition-all">2.845</strong>
+                                class="text-white font-black text-sm sm:text-lg tracking-wide text-emerald-400 mx-0.5 sm:mx-1 transition-all">2.845</strong>
                             usuários ativos!</span>
                     </div>
 
                     <div
-                        class="hidden sm:inline-flex items-center text-[10px] uppercase font-bold text-surface-400 bg-white/5 px-2 py-1 rounded-md border border-white/5">
+                        class="hidden min-[480px]:inline-flex items-center text-[10px] uppercase font-bold text-surface-400 bg-white/5 px-2 py-1 rounded-md border border-white/5 flex-shrink-0">
                         Tempo Real
                     </div>
                 </div>
             </div>
 
             <!-- APP HERO BANNER MOCKUP -->
-            <div class="mt-14 relative max-w-4xl mx-auto">
+            <div class="mt-10 sm:mt-14 relative max-w-4xl mx-auto">
                 <div
                     class="absolute -inset-4 bg-gradient-to-r from-brand-600/30 via-pink-600/20 to-purple-600/30 rounded-3xl blur-2xl opacity-60">
                 </div>
 
                 <div
-                    class="relative glass-panel rounded-3xl p-3 sm:p-5 border border-white/20 shadow-2xl overflow-hidden group">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-900">
+                    class="relative glass-panel rounded-2xl sm:rounded-3xl p-2.5 sm:p-5 border border-white/20 shadow-2xl overflow-hidden group">
+                    <div class="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl bg-surface-900">
                         <img src="assets/unfollow.png" alt="Interface Completa do Insta Unfollow Tool"
                             class="w-full h-auto object-cover transform group-hover:scale-[1.01] transition-transform duration-500">
                         <div
@@ -465,17 +497,16 @@
 
                         <!-- Floating Pill Badges over image -->
                         <div
-                            class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-xs font-bold">
+                            class="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-bold">
                             <div
-                                class="flex items-center gap-2 bg-surface-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 text-white shadow-lg">
-                                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
-                                <span>Painel Premium Oficial</span>
+                                class="flex items-center gap-1.5 sm:gap-2 bg-surface-900/90 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl border border-white/20 text-white shadow-lg">
+                                <i data-lucide="check-circle" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 flex-shrink-0"></i>
+                                <span class="truncate">Painel Premium Oficial</span>
                             </div>
                             <div
-                                class="flex items-center gap-2 bg-surface-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 text-amber-300 shadow-lg">
-                                <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
-                                <span>Whitelist Inteligente Ativa</span>
-                            </div>
+                                class="flex items-center gap-1.5 sm:gap-2 bg-surface-900/90 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl border border-white/20 text-amber-300 shadow-lg">
+                                <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400 text-amber-400 flex-shrink-0"></i>
+                                <span class="truncate">Whitelist Inteligente Ativa</span>
                         </div>
                     </div>
                 </div>
@@ -485,10 +516,10 @@
     </header>
 
     <!-- INTERACTIVE SECTION 1: LIVE SIMULATOR (TRY BEFORE YOU DOWNLOAD) -->
-    <section id="demonstracao" class="py-16 sm:py-20 relative z-10 bg-surface-900/60 border-y border-white/10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="demonstracao" class="py-14 sm:py-20 relative z-10 bg-surface-900/60 border-y border-white/10">
+        <div class="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
 
-            <div class="text-center mb-10">
+            <div class="text-center mb-8 sm:mb-10">
                 <span
                     class="text-xs font-black uppercase tracking-widest text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">
                     Demonstração Interativa
@@ -496,44 +527,44 @@
                 <h2 class="text-2xl sm:text-4xl font-black text-white mt-3 mb-3">
                     Veja o App em Ação no Seu Navegador
                 </h2>
-                <p class="text-sm sm:text-base text-surface-300 max-w-xl mx-auto">
+                <p class="text-xs sm:text-base text-surface-300 max-w-xl mx-auto">
                     Simule uma análise completa e experimente as funções de detecção de não-seguidores e Whitelist em
                     tempo real.
                 </p>
             </div>
 
             <!-- Simulator Container Card -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl relative overflow-hidden">
+            <div class="glass-panel rounded-2xl sm:rounded-3xl p-3.5 min-[420px]:p-5 sm:p-8 border border-white/15 shadow-2xl relative overflow-hidden">
                 <div
                     class="absolute -right-20 -top-20 w-60 h-60 bg-brand-600/10 rounded-full blur-3xl pointer-events-none">
                 </div>
 
                 <!-- Step 1 of Simulator: Username Input -->
-                <div class="flex flex-col sm:flex-row gap-3 items-center mb-6">
+                <div class="flex flex-col sm:flex-row gap-2.5 sm:gap-3 items-center mb-5 sm:mb-6">
                     <div class="relative w-full">
                         <div
-                            class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-surface-400">
-                            <span class="font-bold text-base">@</span>
+                            class="absolute inset-y-0 left-0 pl-3.5 sm:pl-4 flex items-center pointer-events-none text-surface-400">
+                            <span class="font-bold text-sm sm:text-base">@</span>
                         </div>
                         <input id="sim-username" type="text" value="seu_perfil"
-                            class="w-full pl-9 pr-4 py-3.5 bg-surface-950/80 border border-white/15 rounded-xl text-white font-medium focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition"
+                            class="w-full pl-8 sm:pl-9 pr-3 sm:pr-4 py-3 sm:py-3.5 bg-surface-950/80 border border-white/15 rounded-xl text-xs sm:text-base text-white font-medium focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition"
                             placeholder="Digite seu usuário do Instagram...">
                     </div>
                     <button id="sim-btn-start" onclick="iniciarSimulacao()"
-                        class="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-500 hover:to-pink-500 text-white font-black rounded-xl transition-all duration-300 active:scale-95 shadow-lg shadow-brand-500/30 whitespace-nowrap flex items-center justify-center gap-2">
+                        class="w-full sm:w-auto px-5 sm:px-7 py-3 sm:py-3.5 bg-gradient-to-r from-brand-600 to-pink-600 hover:from-brand-500 hover:to-pink-500 text-white font-black text-xs sm:text-sm rounded-xl transition-all duration-300 active:scale-95 shadow-lg shadow-brand-500/30 whitespace-nowrap flex items-center justify-center gap-2">
                         <i data-lucide="search" class="w-4 h-4"></i>
                         <span>Simular Análise</span>
                     </button>
                 </div>
 
                 <!-- Simulation Progress Box (Hidden until clicked) -->
-                <div id="sim-progress-box" class="hidden mb-6 bg-surface-950 p-5 rounded-2xl border border-white/10">
+                <div id="sim-progress-box" class="hidden mb-5 sm:mb-6 bg-surface-950 p-4 sm:p-5 rounded-2xl border border-white/10">
                     <div class="flex items-center justify-between text-xs font-bold text-surface-300 mb-2">
-                        <span id="sim-status-text" class="flex items-center gap-2">
+                        <span id="sim-status-text" class="flex items-center gap-2 text-[11px] sm:text-xs">
                             <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
                             Injetando WebView local e lendo dados...
                         </span>
-                        <span id="sim-percentage" class="text-brand-400 font-extrabold text-sm">0%</span>
+                        <span id="sim-percentage" class="text-brand-400 font-extrabold text-xs sm:text-sm">0%</span>
                     </div>
                     <div class="w-full bg-surface-800 rounded-full h-2.5 overflow-hidden">
                         <div id="sim-bar"
@@ -543,22 +574,22 @@
                 </div>
 
                 <!-- Simulation Dashboard Results -->
-                <div id="sim-results-box" class="space-y-4">
+                <div id="sim-results-box" class="space-y-3.5 sm:space-y-4">
 
                     <!-- Stats bar -->
                     <div
-                        class="grid grid-cols-3 gap-2 sm:gap-4 p-4 bg-surface-950/80 rounded-2xl border border-white/10 text-center">
+                        class="grid grid-cols-3 gap-1.5 sm:gap-4 p-2.5 sm:p-4 bg-surface-950/80 rounded-xl sm:rounded-2xl border border-white/10 text-center">
                         <div>
-                            <div class="text-[11px] font-bold text-surface-400 uppercase">Seguidores</div>
-                            <div class="text-lg sm:text-2xl font-black text-white mt-0.5">1.420</div>
+                            <div class="text-[10px] min-[360px]:text-[11px] font-bold text-surface-400 uppercase">Seguidores</div>
+                            <div class="text-base min-[360px]:text-lg sm:text-2xl font-black text-white mt-0.5">1.420</div>
                         </div>
                         <div>
-                            <div class="text-[11px] font-bold text-surface-400 uppercase">Seguindo</div>
-                            <div class="text-lg sm:text-2xl font-black text-white mt-0.5">1.348</div>
+                            <div class="text-[10px] min-[360px]:text-[11px] font-bold text-surface-400 uppercase">Seguindo</div>
+                            <div class="text-base min-[360px]:text-lg sm:text-2xl font-black text-white mt-0.5">1.348</div>
                         </div>
                         <div>
-                            <div class="text-[11px] font-bold text-pink-400 uppercase">Não te seguem</div>
-                            <div id="sim-count-unfollow" class="text-lg sm:text-2xl font-black text-pink-400 mt-0.5">3
+                            <div class="text-[10px] min-[360px]:text-[11px] font-bold text-pink-400 uppercase">Não te seguem</div>
+                            <div id="sim-count-unfollow" class="text-base min-[360px]:text-lg sm:text-2xl font-black text-pink-400 mt-0.5">3
                                 perfis</div>
                         </div>
                     </div>
@@ -568,22 +599,22 @@
 
                         <!-- Profile 1 -->
                         <div id="sim-card-1"
-                            class="flex items-center justify-between p-3.5 bg-surface-950/60 rounded-xl border border-white/5 hover:border-white/15 transition-all">
-                            <div class="flex items-center gap-3">
+                            class="flex flex-col min-[390px]:flex-row min-[390px]:items-center justify-between gap-2.5 p-3 sm:p-3.5 bg-surface-950/60 rounded-xl border border-white/5 hover:border-white/15 transition-all">
+                            <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
                                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=64&h=64&fit=crop&crop=faces"
-                                    class="w-10 h-10 rounded-full object-cover border border-white/10" alt="Avatar">
-                                <div>
-                                    <div class="text-sm font-bold text-white leading-tight">felipe.designer</div>
-                                    <div class="text-xs text-pink-400 font-medium">Não te segue de volta</div>
+                                    class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-white/10 flex-shrink-0" alt="Avatar">
+                                <div class="min-w-0 flex-1">
+                                    <div class="text-xs sm:text-sm font-bold text-white leading-tight truncate">felipe.designer</div>
+                                    <div class="text-[11px] sm:text-xs text-pink-400 font-medium truncate">Não te segue de volta</div>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center justify-end gap-1.5 sm:gap-2 flex-shrink-0 self-end min-[390px]:self-center">
                                 <button onclick="simToggleWhitelist(1)" id="sim-star-1" title="Adicionar à Whitelist"
-                                    class="p-2 rounded-lg bg-white/5 hover:bg-amber-500/20 text-surface-400 hover:text-amber-400 transition">
-                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    class="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-amber-500/20 text-surface-400 hover:text-amber-400 transition">
+                                    <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                                 </button>
                                 <button onclick="simUnfollow(1)" id="sim-btn-1"
-                                    class="px-3.5 py-1.5 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-bold text-xs transition active:scale-95 border border-pink-500/30">
+                                    class="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-bold text-[11px] sm:text-xs transition active:scale-95 border border-pink-500/30 whitespace-nowrap">
                                     Deixar de Seguir
                                 </button>
                             </div>
@@ -591,22 +622,22 @@
 
                         <!-- Profile 2 -->
                         <div id="sim-card-2"
-                            class="flex items-center justify-between p-3.5 bg-surface-950/60 rounded-xl border border-white/5 hover:border-white/15 transition-all">
-                            <div class="flex items-center gap-3">
+                            class="flex flex-col min-[390px]:flex-row min-[390px]:items-center justify-between gap-2.5 p-3 sm:p-3.5 bg-surface-950/60 rounded-xl border border-white/5 hover:border-white/15 transition-all">
+                            <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
                                 <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=64&h=64&fit=crop&crop=faces"
-                                    class="w-10 h-10 rounded-full object-cover border border-white/10" alt="Avatar">
-                                <div>
-                                    <div class="text-sm font-bold text-white leading-tight">marcos.marketing</div>
-                                    <div class="text-xs text-pink-400 font-medium">Não te segue de volta</div>
+                                    class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-white/10 flex-shrink-0" alt="Avatar">
+                                <div class="min-w-0 flex-1">
+                                    <div class="text-xs sm:text-sm font-bold text-white leading-tight truncate">marcos.marketing</div>
+                                    <div class="text-[11px] sm:text-xs text-pink-400 font-medium truncate">Não te segue de volta</div>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center justify-end gap-1.5 sm:gap-2 flex-shrink-0 self-end min-[390px]:self-center">
                                 <button onclick="simToggleWhitelist(2)" id="sim-star-2" title="Adicionar à Whitelist"
-                                    class="p-2 rounded-lg bg-white/5 hover:bg-amber-500/20 text-surface-400 hover:text-amber-400 transition">
-                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    class="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-amber-500/20 text-surface-400 hover:text-amber-400 transition">
+                                    <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                                 </button>
                                 <button onclick="simUnfollow(2)" id="sim-btn-2"
-                                    class="px-3.5 py-1.5 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-bold text-xs transition active:scale-95 border border-pink-500/30">
+                                    class="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-bold text-[11px] sm:text-xs transition active:scale-95 border border-pink-500/30 whitespace-nowrap">
                                     Deixar de Seguir
                                 </button>
                             </div>
@@ -614,22 +645,22 @@
 
                         <!-- Profile 3 -->
                         <div id="sim-card-3"
-                            class="flex items-center justify-between p-3.5 bg-surface-950/60 rounded-xl border border-white/5 hover:border-white/15 transition-all">
-                            <div class="flex items-center gap-3">
+                            class="flex flex-col min-[390px]:flex-row min-[390px]:items-center justify-between gap-2.5 p-3 sm:p-3.5 bg-surface-950/60 rounded-xl border border-white/5 hover:border-white/15 transition-all">
+                            <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
                                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=64&h=64&fit=crop&crop=faces"
-                                    class="w-10 h-10 rounded-full object-cover border border-white/10" alt="Avatar">
-                                <div>
-                                    <div class="text-sm font-bold text-white leading-tight">camila.viajante</div>
-                                    <div class="text-xs text-pink-400 font-medium">Não te segue de volta</div>
+                                    class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-white/10 flex-shrink-0" alt="Avatar">
+                                <div class="min-w-0 flex-1">
+                                    <div class="text-xs sm:text-sm font-bold text-white leading-tight truncate">camila.viajante</div>
+                                    <div class="text-[11px] sm:text-xs text-pink-400 font-medium truncate">Não te segue de volta</div>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center justify-end gap-1.5 sm:gap-2 flex-shrink-0 self-end min-[390px]:self-center">
                                 <button onclick="simToggleWhitelist(3)" id="sim-star-3" title="Adicionar à Whitelist"
-                                    class="p-2 rounded-lg bg-white/5 hover:bg-amber-500/20 text-surface-400 hover:text-amber-400 transition">
-                                    <i data-lucide="star" class="w-4 h-4"></i>
+                                    class="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-amber-500/20 text-surface-400 hover:text-amber-400 transition">
+                                    <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                                 </button>
                                 <button onclick="simUnfollow(3)" id="sim-btn-3"
-                                    class="px-3.5 py-1.5 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-bold text-xs transition active:scale-95 border border-pink-500/30">
+                                    class="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 font-bold text-[11px] sm:text-xs transition active:scale-95 border border-pink-500/30 whitespace-nowrap">
                                     Deixar de Seguir
                                 </button>
                             </div>
@@ -639,15 +670,15 @@
 
                     <!-- Simulator Footer Action -->
                     <div
-                        class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10 text-xs">
-                        <div class="flex items-center gap-2 text-surface-400">
-                            <i data-lucide="info" class="w-4 h-4 text-brand-400"></i>
+                        class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 border-t border-white/10 text-xs">
+                        <div class="flex items-center gap-2 text-surface-400 text-[11px] sm:text-xs">
+                            <i data-lucide="info" class="w-4 h-4 text-brand-400 flex-shrink-0"></i>
                             <span>Simulação ilustrativa com dados seguros. No app oficial, tudo roda na sua conta
                                 real.</span>
                         </div>
                         <a href="https://mega.nz/file/JYxFTAgJ#alifBxNGX03xCnJHfHfMJIvQEJgh9qxpyv9xQC66E5U"
                             target="_blank" onclick="registrarDownload('sim_cta', event)"
-                            class="w-full sm:w-auto text-center px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-surface-950 font-black rounded-lg transition active:scale-95 shadow-md">
+                            class="w-full sm:w-auto text-center px-4 py-2.5 sm:py-2 bg-emerald-500 hover:bg-emerald-400 text-surface-950 font-black text-xs rounded-lg transition active:scale-95 shadow-md flex-shrink-0">
                             Baixar APK e Usar na Minha Conta →
                         </a>
                     </div>
@@ -789,21 +820,21 @@
             <!-- Interactive Tab Selectors -->
             <div class="flex flex-wrap justify-center gap-2 mb-8">
                 <button onclick="trocarAbaGaleria(1)" id="tab-btn-1"
-                    class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-brand-600 text-white shadow-lg shadow-brand-500/25 transition">
+                    class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-brand-600 text-white shadow-lg shadow-brand-500/25 transition w-full min-[460px]:w-auto text-center">
                     1. Painel Principal & Whitelist
                 </button>
                 <button onclick="trocarAbaGaleria(2)" id="tab-btn-2"
-                    class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-surface-900 text-surface-300 hover:text-white border border-white/10 transition">
+                    class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-surface-900 text-surface-300 hover:text-white border border-white/10 transition w-full min-[460px]:w-auto text-center">
                     2. Varredura Rápida
                 </button>
                 <button onclick="trocarAbaGaleria(3)" id="tab-btn-3"
-                    class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-surface-900 text-surface-300 hover:text-white border border-white/10 transition">
+                    class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-surface-900 text-surface-300 hover:text-white border border-white/10 transition w-full min-[460px]:w-auto text-center">
                     3. Tela de Login & Ativação
                 </button>
             </div>
 
             <!-- Tab 1 View: Dashboard -->
-            <div id="tab-content-1" class="glass-panel rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl">
+            <div id="tab-content-1" class="glass-panel rounded-2xl sm:rounded-3xl p-4 min-[400px]:p-6 sm:p-8 border border-white/15 shadow-2xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <div
@@ -844,7 +875,7 @@
             </div>
 
             <!-- Tab 2 View: Scanning Progress -->
-            <div id="tab-content-2" class="hidden glass-panel rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl">
+            <div id="tab-content-2" class="hidden glass-panel rounded-2xl sm:rounded-3xl p-4 min-[400px]:p-6 sm:p-8 border border-white/15 shadow-2xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <div
@@ -883,7 +914,7 @@
             </div>
 
             <!-- Tab 3 View: Login & Premium Activation -->
-            <div id="tab-content-3" class="hidden glass-panel rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl">
+            <div id="tab-content-3" class="hidden glass-panel rounded-2xl sm:rounded-3xl p-4 min-[400px]:p-6 sm:p-8 border border-white/15 shadow-2xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <div
@@ -957,26 +988,26 @@
             </div>
 
             <!-- Step by Step Cards -->
-            <div class="space-y-8">
+            <div class="space-y-6 sm:space-y-8">
 
                 <!-- PASSO 1 -->
                 <div class="step-card relative">
                     <div class="step-line relative">
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-center gap-3 sm:gap-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white flex items-center justify-center text-lg font-black shadow-lg shadow-emerald-600/30">
+                                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white flex items-center justify-center text-base sm:text-lg font-black shadow-lg shadow-emerald-600/30">
                                 1
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 min-w-0">
                                 <span
-                                    class="text-[11px] font-extrabold uppercase tracking-widest text-emerald-400">Passo
+                                    class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-widest text-emerald-400">Passo
                                     1</span>
-                                <h3 class="text-xl sm:text-2xl font-black text-white">Baixe e Instale o APK Oficial</h3>
+                                <h3 class="text-lg sm:text-2xl font-black text-white truncate">Baixe e Instale o APK Oficial</h3>
                             </div>
                         </div>
 
-                        <div class="ml-16 mt-4 glass-panel p-6 rounded-2xl border border-white/10">
-                            <p class="text-surface-300 text-sm leading-relaxed mb-5">
+                        <div class="ml-0 sm:ml-16 mt-3 sm:mt-4 glass-panel p-3.5 min-[400px]:p-5 sm:p-6 rounded-2xl border border-white/10">
+                            <p class="text-surface-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5">
                                 Baixe o arquivo <code
                                     class="bg-surface-800 text-emerald-300 px-2 py-0.5 rounded text-xs font-mono font-bold">InstaUnfollowTool.apk</code>.
                                 Abra-o no celular e toque em <strong class="text-white">Instalar</strong>. Se surgir
@@ -986,33 +1017,33 @@
 
                             <!-- Download Box -->
                             <div
-                                class="bg-surface-900 p-4 rounded-xl border border-white/10 flex flex-wrap items-center justify-between gap-4">
-                                <div class="flex items-center gap-3">
+                                class="bg-surface-900 p-3 sm:p-4 rounded-xl border border-white/10 flex flex-col min-[440px]:flex-row items-stretch min-[440px]:items-center justify-between gap-3 sm:gap-4">
+                                <div class="flex items-center gap-3 min-w-0">
                                     <div
-                                        class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/30">
+                                        class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/30">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                            class="w-6 h-6">
+                                            class="w-5 h-5 sm:w-6 sm:h-6">
                                             <path
                                                 d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v6c0 .83.67 1.5 1.5 1.5S5 16.33 5 15.5v-6C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-6c0-.83-.67-1.5-1.5-1.5zm-4.97-4.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 2.23 12.95 2 12 2c-.96 0-1.86.23-2.66.63L7.85 1.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.3C6.77 4.12 5.61 5.76 5.37 7.74h13.26c-.24-1.98-1.4-3.62-3.1-4.58zM9 6c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
                                         </svg>
                                     </div>
-                                    <div>
-                                        <div class="font-bold text-white text-sm">InstaUnfollowTool.apk</div>
-                                        <div class="text-xs text-surface-400">Versão 5.5.6 • 10.0 MB</div>
+                                    <div class="min-w-0">
+                                        <div class="font-bold text-white text-xs sm:text-sm truncate">InstaUnfollowTool.apk</div>
+                                        <div class="text-[11px] sm:text-xs text-surface-400">Versão 5.5.6 • 10.0 MB</div>
                                     </div>
                                 </div>
                                 <a href="https://mega.nz/file/JYxFTAgJ#alifBxNGX03xCnJHfHfMJIvQEJgh9qxpyv9xQC66E5U"
                                     target="_blank" onclick="registrarDownload('passo1_apk', event)"
-                                    class="w-full sm:w-auto px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-surface-950 font-black text-xs rounded-xl transition active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                                    class="w-full min-[440px]:w-auto px-4 sm:px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-surface-950 font-black text-xs rounded-xl transition active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 whitespace-nowrap">
                                     <i data-lucide="download" class="w-4 h-4"></i>
                                     BAIXAR APK AGORA
                                 </a>
                             </div>
 
                             <div
-                                class="mt-4 flex items-start gap-3 p-3.5 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs text-amber-300">
+                                class="mt-3 sm:mt-4 flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs text-amber-300">
                                 <i data-lucide="lightbulb" class="w-4 h-4 flex-shrink-0 text-amber-400 mt-0.5"></i>
-                                <span><strong>Dica:</strong> Se o Google Play Protect solicitar confirmação, toque em
+                                <span class="leading-relaxed"><strong>Dica:</strong> Se o Google Play Protect solicitar confirmação, toque em
                                     <em>"Mais detalhes"</em> e depois em <em>"Instalar assim mesmo"</em>. É o
                                     procedimento padrão para pacotes APK diretos.</span>
                             </div>
@@ -1023,33 +1054,33 @@
                 <!-- PASSO 2 -->
                 <div class="step-card relative">
                     <div class="step-line relative">
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-center gap-3 sm:gap-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-indigo-600 text-white flex items-center justify-center text-lg font-black shadow-lg shadow-brand-600/30">
+                                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-brand-500 to-indigo-600 text-white flex items-center justify-center text-base sm:text-lg font-black shadow-lg shadow-brand-600/30">
                                 2
                             </div>
-                            <div class="flex-1">
-                                <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-400">Passo
+                            <div class="flex-1 min-w-0">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-widest text-brand-400">Passo
                                     2</span>
-                                <h3 class="text-xl sm:text-2xl font-black text-white">Faça Login no App com Segurança
+                                <h3 class="text-lg sm:text-2xl font-black text-white truncate">Faça Login no App com Segurança
                                 </h3>
                             </div>
                         </div>
 
-                        <div class="ml-16 mt-4 glass-panel p-6 rounded-2xl border border-white/10">
-                            <p class="text-surface-300 text-sm leading-relaxed mb-4">
+                        <div class="ml-0 sm:ml-16 mt-3 sm:mt-4 glass-panel p-3.5 min-[400px]:p-5 sm:p-6 rounded-2xl border border-white/10">
+                            <p class="text-surface-300 text-xs sm:text-sm leading-relaxed mb-4">
                                 Abra o aplicativo instalado. Digite seu nome de usuário do Instagram ou conecte na
                                 WebView oficial. Suas credenciais são processadas <strong
                                     class="text-white">estritamente no seu celular</strong>, sem compartilhamento com
                                 bancos externos.
                             </p>
 
-                            <div class="flex items-center gap-4 p-4 bg-surface-900 rounded-xl border border-white/10">
+                            <div class="flex flex-col min-[380px]:flex-row items-start min-[380px]:items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-surface-900 rounded-xl border border-white/10">
                                 <img src="assets/login.jpeg" alt="Tela de Login Real"
-                                    class="w-20 h-auto rounded-lg border border-white/15 shadow-md">
+                                    class="w-16 sm:w-20 h-auto rounded-lg border border-white/15 shadow-md flex-shrink-0">
                                 <div class="text-xs text-surface-300">
                                     <div class="font-bold text-white mb-1">Tela de Conexão Oficial</div>
-                                    <p>O app utiliza a interface oficial da Meta para garantir autenticação segura e sem
+                                    <p class="leading-relaxed">O app utiliza a interface oficial da Meta para garantir autenticação segura e sem
                                         riscos de bloqueio.</p>
                                 </div>
                             </div>
@@ -1060,33 +1091,33 @@
                 <!-- PASSO 3 -->
                 <div class="step-card relative">
                     <div class="step-line relative">
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-center gap-3 sm:gap-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 text-white flex items-center justify-center text-lg font-black shadow-lg shadow-violet-600/30">
+                                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 text-white flex items-center justify-center text-base sm:text-lg font-black shadow-lg shadow-violet-600/30">
                                 3
                             </div>
-                            <div class="flex-1">
-                                <span class="text-[11px] font-extrabold uppercase tracking-widest text-violet-400">Passo
+                            <div class="flex-1 min-w-0">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-widest text-violet-400">Passo
                                     3</span>
-                                <h3 class="text-xl sm:text-2xl font-black text-white">Toque em "Já assinei — Ativar
+                                <h3 class="text-lg sm:text-2xl font-black text-white truncate">Toque em "Já assinei — Ativar
                                     Premium"</h3>
                             </div>
                         </div>
 
-                        <div class="ml-16 mt-4 glass-panel p-6 rounded-2xl border border-white/10">
-                            <p class="text-surface-300 text-sm leading-relaxed mb-5">
+                        <div class="ml-0 sm:ml-16 mt-3 sm:mt-4 glass-panel p-3.5 min-[400px]:p-5 sm:p-6 rounded-2xl border border-white/10">
+                            <p class="text-surface-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5">
                                 No topo do app, localize o botão verde destacado <strong class="text-white">"Já assinei
                                     — Ativar Premium"</strong> e toque nele para abrir a tela de validação da sua
                                 licença.
                             </p>
 
                             <div
-                                class="max-w-xs mx-auto p-4 rounded-xl bg-surface-950 border border-white/10 text-center">
-                                <div class="text-xs font-bold text-surface-400 mb-2">Exemplo no Aplicativo:</div>
+                                class="max-w-xs mx-auto p-3.5 sm:p-4 rounded-xl bg-surface-950 border border-white/10 text-center">
+                                <div class="text-[11px] sm:text-xs font-bold text-surface-400 mb-2">Exemplo no Aplicativo:</div>
                                 <div
-                                    class="px-4 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-sm shadow-md flex items-center justify-center gap-2">
-                                    <i data-lucide="check" class="w-4 h-4"></i>
-                                    Já assinei — Ativar Premium
+                                    class="px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 flex-shrink-0"></i>
+                                    <span>Já assinei — Ativar Premium</span>
                                 </div>
                             </div>
                         </div>
@@ -1096,37 +1127,36 @@
                 <!-- PASSO 4 -->
                 <div class="step-card relative">
                     <div class="step-line relative">
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-center gap-3 sm:gap-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center text-lg font-black shadow-lg shadow-amber-600/30">
+                                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center text-base sm:text-lg font-black shadow-lg shadow-amber-600/30">
                                 4
                             </div>
-                            <div class="flex-1">
-                                <span class="text-[11px] font-extrabold uppercase tracking-widest text-amber-400">Passo
+                            <div class="flex-1 min-w-0">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-widest text-amber-400">Passo
                                     4</span>
-                                <h3 class="text-xl sm:text-2xl font-black text-white">Insira o E-mail Utilizado na
-                                    Compra</h3>
+                                <h3 class="text-lg sm:text-2xl font-black text-white truncate">Insira o E-mail de Compra</h3>
                             </div>
                         </div>
 
-                        <div class="ml-16 mt-4 glass-panel p-6 rounded-2xl border border-white/10">
-                            <p class="text-surface-300 text-sm leading-relaxed mb-4">
+                        <div class="ml-0 sm:ml-16 mt-3 sm:mt-4 glass-panel p-3.5 min-[400px]:p-5 sm:p-6 rounded-2xl border border-white/10">
+                            <p class="text-surface-300 text-xs sm:text-sm leading-relaxed mb-4">
                                 Digite exatamente o e-mail da sua compra (Mercado Pago, Hotmart ou checkout). O sistema
                                 diferencia letras maiúsculas e minúsculas.
                             </p>
 
                             <!-- Interactive Email Tester Widget -->
-                            <div class="p-4 bg-surface-900 rounded-xl border border-white/10 mb-4">
+                            <div class="p-3 sm:p-4 bg-surface-900 rounded-xl border border-white/10 mb-4">
                                 <div class="text-xs font-bold text-surface-300 mb-2 flex items-center gap-1.5">
-                                    <i data-lucide="check-check" class="w-3.5 h-3.5 text-brand-400"></i>
+                                    <i data-lucide="check-check" class="w-3.5 h-3.5 text-brand-400 flex-shrink-0"></i>
                                     <span>Validador de Formato de E-mail:</span>
                                 </div>
-                                <div class="flex gap-2">
+                                <div class="flex flex-col min-[360px]:flex-row gap-2">
                                     <input id="test-email-input" oninput="validarFormatoEmail()" type="email"
                                         placeholder="Digite seu e-mail para testar..."
-                                        class="w-full px-3.5 py-2.5 rounded-lg bg-surface-950 border border-white/10 text-xs text-white focus:border-brand-500 outline-none">
+                                        class="w-full px-3 sm:px-3.5 py-2.5 rounded-lg bg-surface-950 border border-white/10 text-xs text-white focus:border-brand-500 outline-none">
                                     <button onclick="corrigirEmailFormat()"
-                                        class="px-3 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-bold transition active:scale-95 whitespace-nowrap">
+                                        class="w-full min-[360px]:w-auto px-4 py-2.5 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-bold transition active:scale-95 whitespace-nowrap">
                                         Limpar
                                     </button>
                                 </div>
@@ -1136,14 +1166,14 @@
                             </div>
 
                             <div
-                                class="flex items-center gap-3 p-3 bg-surface-950 rounded-xl border border-white/10 text-xs">
-                                <div class="flex items-center gap-1.5 text-red-400 font-mono">
-                                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                                class="flex items-center justify-between gap-2 p-3 bg-surface-950 rounded-xl border border-white/10 text-xs overflow-x-auto">
+                                <div class="flex items-center gap-1.5 text-red-400 font-mono text-[11px] sm:text-xs whitespace-nowrap">
+                                    <i data-lucide="x" class="w-3.5 h-3.5 flex-shrink-0"></i>
                                     <span><span class="line-through">N</span>ome@gmail.com</span>
                                 </div>
-                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-surface-500"></i>
-                                <div class="flex items-center gap-1.5 text-emerald-400 font-mono font-bold">
-                                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-surface-500 flex-shrink-0"></i>
+                                <div class="flex items-center gap-1.5 text-emerald-400 font-mono font-bold text-[11px] sm:text-xs whitespace-nowrap">
+                                    <i data-lucide="check" class="w-3.5 h-3.5 flex-shrink-0"></i>
                                     <span>nome@gmail.com</span>
                                 </div>
                             </div>
@@ -1154,43 +1184,42 @@
                 <!-- PASSO 5 -->
                 <div class="step-card relative">
                     <div class="step-line relative">
-                        <div class="flex items-start gap-4">
+                        <div class="flex items-center gap-3 sm:gap-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white flex items-center justify-center text-lg font-black shadow-lg shadow-pink-600/30">
+                                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white flex items-center justify-center text-base sm:text-lg font-black shadow-lg shadow-pink-600/30">
                                 5
                             </div>
-                            <div class="flex-1">
-                                <span class="text-[11px] font-extrabold uppercase tracking-widest text-pink-400">Passo
+                            <div class="flex-1 min-w-0">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-widest text-pink-400">Passo
                                     5</span>
-                                <h3 class="text-xl sm:text-2xl font-black text-white">Pronto! Recursos Premium Liberados
-                                    🎉</h3>
+                                <h3 class="text-lg sm:text-2xl font-black text-white truncate">Pronto! Premium Liberado 🎉</h3>
                             </div>
                         </div>
 
-                        <div class="ml-16 mt-4 glass-panel p-6 rounded-2xl border border-white/10">
-                            <p class="text-surface-300 text-sm leading-relaxed mb-5">
+                        <div class="ml-0 sm:ml-16 mt-3 sm:mt-4 glass-panel p-3.5 min-[400px]:p-5 sm:p-6 rounded-2xl border border-white/10">
+                            <p class="text-surface-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5">
                                 Após a validação, a mensagem <strong class="text-emerald-400">"Conta Premium
                                     Ativa!"</strong> será exibida no app. Você agora pode analisar e remover
                                 não-seguidores sem restrições.
                             </p>
 
                             <!-- Perks Grid -->
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-                                <div class="p-3 bg-surface-900 rounded-xl border border-white/10">
-                                    <i data-lucide="infinity" class="w-5 h-5 text-emerald-400 mx-auto mb-1"></i>
-                                    <div class="text-[11px] font-bold text-white uppercase">Sem Limite</div>
+                            <div class="grid grid-cols-2 min-[440px]:grid-cols-4 gap-2 sm:gap-3 text-center">
+                                <div class="p-2.5 sm:p-3 bg-surface-900 rounded-xl border border-white/10">
+                                    <i data-lucide="infinity" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 mx-auto mb-1"></i>
+                                    <div class="text-[10px] sm:text-[11px] font-bold text-white uppercase">Sem Limite</div>
                                 </div>
-                                <div class="p-3 bg-surface-900 rounded-xl border border-white/10">
-                                    <i data-lucide="zap" class="w-5 h-5 text-brand-400 mx-auto mb-1"></i>
-                                    <div class="text-[11px] font-bold text-white uppercase">Turbo 0.1s</div>
+                                <div class="p-2.5 sm:p-3 bg-surface-900 rounded-xl border border-white/10">
+                                    <i data-lucide="zap" class="w-4 h-4 sm:w-5 sm:h-5 text-brand-400 mx-auto mb-1"></i>
+                                    <div class="text-[10px] sm:text-[11px] font-bold text-white uppercase">Turbo 0.1s</div>
                                 </div>
-                                <div class="p-3 bg-surface-900 rounded-xl border border-white/10">
-                                    <i data-lucide="shield-check" class="w-5 h-5 text-indigo-400 mx-auto mb-1"></i>
-                                    <div class="text-[11px] font-bold text-white uppercase">Anti-Ban</div>
+                                <div class="p-2.5 sm:p-3 bg-surface-900 rounded-xl border border-white/10">
+                                    <i data-lucide="shield-check" class="w-4 h-4 sm:w-5 sm:h-5 text-indigo-400 mx-auto mb-1"></i>
+                                    <div class="text-[10px] sm:text-[11px] font-bold text-white uppercase">Anti-Ban</div>
                                 </div>
-                                <div class="p-3 bg-surface-900 rounded-xl border border-white/10">
-                                    <i data-lucide="star" class="w-5 h-5 text-amber-400 mx-auto mb-1"></i>
-                                    <div class="text-[11px] font-bold text-white uppercase">Whitelist</div>
+                                <div class="p-2.5 sm:p-3 bg-surface-900 rounded-xl border border-white/10">
+                                    <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 mx-auto mb-1"></i>
+                                    <div class="text-[10px] sm:text-[11px] font-bold text-white uppercase">Whitelist</div>
                                 </div>
                             </div>
                         </div>
@@ -1219,58 +1248,66 @@
                 </p>
             </div>
 
-            <!-- Comparison Table -->
+            <!-- Comparison Table Container with Horizontal Scroll for Mobile -->
             <div class="glass-panel rounded-2xl border border-white/15 overflow-hidden shadow-2xl">
-                <table class="w-full text-left text-xs sm:text-sm">
-                    <thead>
-                        <tr class="bg-surface-950/80 border-b border-white/10">
-                            <th class="p-4 sm:p-5 font-bold text-surface-300">Recurso / Funcionalidade</th>
-                            <th class="p-4 sm:p-5 font-bold text-surface-400 text-center">Versão Gratuita</th>
-                            <th class="p-4 sm:p-5 font-black text-amber-300 bg-amber-500/10 text-center">Versão Premium
-                                PRO ⭐</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-white/5">
-                        <tr>
-                            <td class="p-4 sm:p-5 font-medium text-white">Limite diário de unfollows</td>
-                            <td class="p-4 sm:p-5 text-center text-surface-400">Até 10 / dia</td>
-                            <td class="p-4 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Ilimitado (Com
-                                Anti-Ban)</td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 sm:p-5 font-medium text-white">Visualização com fotos de perfil</td>
-                            <td class="p-4 sm:p-5 text-center text-emerald-400"><i data-lucide="check"
-                                    class="w-4 h-4 mx-auto"></i></td>
-                            <td class="p-4 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5"><i
-                                    data-lucide="check" class="w-4 h-4 mx-auto"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 sm:p-5 font-medium text-white">Whitelist de proteção (Estrela)</td>
-                            <td class="p-4 sm:p-5 text-center text-surface-400">Até 3 perfis</td>
-                            <td class="p-4 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Perfis
-                                Infinitos</td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 sm:p-5 font-medium text-white">Cache de memória em Kotlin</td>
-                            <td class="p-4 sm:p-5 text-center text-surface-400">Padrão</td>
-                            <td class="p-4 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Turbo (0.1s)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 sm:p-5 font-medium text-white">Exportação de relatório em TXT</td>
-                            <td class="p-4 sm:p-5 text-center text-surface-500"><i data-lucide="x"
-                                    class="w-4 h-4 mx-auto"></i></td>
-                            <td class="p-4 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5"><i
-                                    data-lucide="check" class="w-4 h-4 mx-auto"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 sm:p-5 font-medium text-white">Suporte técnico prioritário</td>
-                            <td class="p-4 sm:p-5 text-center text-surface-500">Comunidade</td>
-                            <td class="p-4 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Atendimento VIP
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto">
+                    <table class="w-full min-w-[500px] sm:min-w-full text-left text-xs sm:text-sm">
+                        <thead>
+                            <tr class="bg-surface-950/80 border-b border-white/10">
+                                <th class="p-3.5 sm:p-5 font-bold text-surface-300">Recurso / Funcionalidade</th>
+                                <th class="p-3.5 sm:p-5 font-bold text-surface-400 text-center">Versão Gratuita</th>
+                                <th class="p-3.5 sm:p-5 font-black text-amber-300 bg-amber-500/10 text-center whitespace-nowrap">Versão Premium
+                                    PRO ⭐</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr>
+                                <td class="p-3.5 sm:p-5 font-medium text-white">Limite diário de unfollows</td>
+                                <td class="p-3.5 sm:p-5 text-center text-surface-400">Até 10 / dia</td>
+                                <td class="p-3.5 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Ilimitado (Com
+                                    Anti-Ban)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 sm:p-5 font-medium text-white">Visualização com fotos de perfil</td>
+                                <td class="p-3.5 sm:p-5 text-center text-emerald-400"><i data-lucide="check"
+                                        class="w-4 h-4 mx-auto"></i></td>
+                                <td class="p-3.5 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5"><i
+                                        data-lucide="check" class="w-4 h-4 mx-auto"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 sm:p-5 font-medium text-white">Whitelist de proteção (Estrela)</td>
+                                <td class="p-3.5 sm:p-5 text-center text-surface-400">Até 3 perfis</td>
+                                <td class="p-3.5 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Perfis
+                                    Infinitos</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 sm:p-5 font-medium text-white">Cache de memória em Kotlin</td>
+                                <td class="p-3.5 sm:p-5 text-center text-surface-400">Padrão</td>
+                                <td class="p-3.5 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Turbo (0.1s)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 sm:p-5 font-medium text-white">Exportação de relatório em TXT</td>
+                                <td class="p-3.5 sm:p-5 text-center text-surface-500"><i data-lucide="x"
+                                        class="w-4 h-4 mx-auto"></i></td>
+                                <td class="p-3.5 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5"><i
+                                        data-lucide="check" class="w-4 h-4 mx-auto"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 sm:p-5 font-medium text-white">Suporte técnico prioritário</td>
+                                <td class="p-3.5 sm:p-5 text-center text-surface-500">Comunidade</td>
+                                <td class="p-3.5 sm:p-5 text-center font-bold text-emerald-400 bg-amber-500/5">Atendimento VIP
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Mobile Table Hint -->
+            <div class="sm:hidden text-center mt-3 text-[11px] text-surface-400 flex items-center justify-center gap-1.5">
+                <i data-lucide="arrow-left-right" class="w-3.5 h-3.5 text-brand-400"></i>
+                <span>Deslize a tabela para o lado para ver todos os dados</span>
             </div>
 
         </div>
@@ -1381,11 +1418,11 @@
     </section>
 
     <!-- FINAL CALL TO ACTION BANNER -->
-    <section class="py-16 sm:py-24 relative z-10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-14 sm:py-24 relative z-10">
+        <div class="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
 
             <div
-                class="relative overflow-hidden rounded-3xl p-8 sm:p-14 text-center border border-white/20 shadow-2xl bg-gradient-to-br from-brand-900 via-surface-900 to-black">
+                class="relative overflow-hidden rounded-2xl sm:rounded-3xl p-5 min-[400px]:p-8 sm:p-14 text-center border border-white/20 shadow-2xl bg-gradient-to-br from-brand-900 via-surface-900 to-black">
                 <div
                     class="absolute -top-32 -left-32 w-72 h-72 bg-brand-500/30 rounded-full blur-3xl pointer-events-none">
                 </div>
@@ -1394,29 +1431,29 @@
                 </div>
 
                 <div class="relative z-10">
-                    <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
+                    <h2 class="text-2xl min-[400px]:text-3xl sm:text-5xl font-black text-white mb-3 sm:mb-4 tracking-tight leading-tight">
                         Pronto para organizar seu perfil hoje mesmo?
                     </h2>
-                    <p class="text-surface-300 text-sm sm:text-base max-w-xl mx-auto mb-8 font-medium">
+                    <p class="text-surface-300 text-xs sm:text-base max-w-xl mx-auto mb-6 sm:mb-8 font-medium">
                         Baixe o aplicativo para Android ou adicione ao seu navegador favorito em menos de 1 minuto.
                     </p>
 
-                    <div class="flex flex-wrap items-center justify-center gap-3.5">
+                    <div class="flex flex-col min-[480px]:flex-row items-center justify-center gap-2.5 sm:gap-3.5">
                         <a href="https://mega.nz/file/JYxFTAgJ#alifBxNGX03xCnJHfHfMJIvQEJgh9qxpyv9xQC66E5U"
                             target="_blank" onclick="registrarDownload('bottom_apk', event)"
-                            class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-black text-sm shadow-xl shadow-emerald-500/30 transition-all duration-300 active:scale-95 flex items-center gap-2.5">
-                            <i data-lucide="download" class="w-4.5 h-4.5"></i>
+                            class="w-full min-[480px]:w-auto px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-black text-xs sm:text-sm shadow-xl shadow-emerald-500/30 transition-all duration-300 active:scale-95 flex items-center justify-center gap-2.5">
+                            <i data-lucide="download" class="w-4 h-4 sm:w-4.5 sm:h-4.5"></i>
                             <span>Baixar APK Grátis (10.0 MB)</span>
                         </a>
 
                         <button onclick="abrirModalQR()"
-                            class="px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 backdrop-blur-md transition-all active:scale-95 flex items-center gap-2">
-                            <i data-lucide="qr-code" class="w-4.5 h-4.5"></i>
+                            class="w-full min-[480px]:w-auto px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 backdrop-blur-md transition-all active:scale-95 flex items-center justify-center gap-2">
+                            <i data-lucide="qr-code" class="w-4 h-4 sm:w-4.5 sm:h-4.5"></i>
                             <span>QR Code Celular</span>
                         </button>
 
                         <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-                            class="px-4 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-surface-300 hover:text-white transition active:scale-95"
+                            class="hidden min-[480px]:inline-flex px-4 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-surface-300 hover:text-white transition active:scale-95"
                             title="Voltar ao Topo">
                             <i data-lucide="arrow-up" class="w-4 h-4"></i>
                         </button>
@@ -1428,7 +1465,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-surface-950 border-t border-white/10 py-12 px-4 relative z-10 text-surface-400 text-xs">
+    <footer class="bg-surface-950 border-t border-white/10 pt-10 pb-28 sm:py-12 px-4 relative z-10 text-surface-400 text-xs">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
 
@@ -1463,16 +1500,16 @@
     </footer>
 
     <!-- MOBILE STICKY BOTTOM BAR -->
-    <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 p-3 glass-panel border-t border-white/15">
-        <div class="flex items-center gap-2">
+    <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 p-2.5 sm:p-3 glass-panel border-t border-white/15 bg-surface-950/90 backdrop-blur-xl">
+        <div class="flex items-center gap-2 max-w-md mx-auto">
             <a href="https://mega.nz/file/JYxFTAgJ#alifBxNGX03xCnJHfHfMJIvQEJgh9qxpyv9xQC66E5U" target="_blank"
                 onclick="registrarDownload('mobile_bar', event)"
-                class="flex-1 py-3 px-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-extrabold text-xs rounded-xl shadow-lg flex items-center justify-center gap-2 active:scale-95">
-                <i data-lucide="download" class="w-4 h-4"></i>
-                <span>Baixar APK Oficial (10.0 MB)</span>
+                class="flex-1 py-2.5 px-3 min-[360px]:py-3 min-[360px]:px-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-extrabold text-[11px] min-[360px]:text-xs rounded-xl shadow-lg flex items-center justify-center gap-1.5 min-[360px]:gap-2 active:scale-95 truncate">
+                <i data-lucide="download" class="w-4 h-4 flex-shrink-0"></i>
+                <span class="truncate">Baixar APK Oficial (10.0 MB)</span>
             </a>
             <button onclick="abrirModalQR()"
-                class="p-3 bg-white/10 text-white rounded-xl border border-white/15 active:scale-95" title="QR Code">
+                class="p-2.5 min-[360px]:p-3 bg-white/10 text-white rounded-xl border border-white/15 active:scale-95 flex-shrink-0" title="QR Code">
                 <i data-lucide="qr-code" class="w-4 h-4"></i>
             </button>
         </div>
@@ -1480,24 +1517,24 @@
 
     <!-- MODAL: QR CODE FOR MOBILE SCAN -->
     <div id="modal-qr"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300">
+        class="fixed inset-0 z-50 flex items-center justify-center p-3.5 sm:p-4 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300">
         <div
-            class="glass-panel bg-surface-900 border border-white/20 rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center relative shadow-2xl">
+            class="glass-panel bg-surface-900 border border-white/20 rounded-2xl sm:rounded-3xl p-4 min-[400px]:p-6 sm:p-8 max-w-sm w-full text-center relative shadow-2xl">
             <button onclick="fecharModalQR()"
-                class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
-                <i data-lucide="x" class="w-4 h-4"></i>
+                class="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+                <i data-lucide="x" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
             </button>
 
             <div
-                class="w-12 h-12 rounded-2xl bg-brand-500/20 text-brand-300 flex items-center justify-center mx-auto mb-3">
-                <i data-lucide="qr-code" class="w-6 h-6"></i>
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-brand-500/20 text-brand-300 flex items-center justify-center mx-auto mb-2.5 sm:mb-3">
+                <i data-lucide="qr-code" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
 
-            <h3 class="text-xl font-black text-white mb-1">Baixar no Celular</h3>
-            <p class="text-xs text-surface-300 mb-5">Aponte a câmera do seu celular Android para o QR Code abaixo para
+            <h3 class="text-lg sm:text-xl font-black text-white mb-1">Baixar no Celular</h3>
+            <p class="text-xs text-surface-300 mb-4 sm:mb-5">Aponte a câmera do seu celular Android para o QR Code abaixo para
                 baixar o APK direto:</p>
 
-            <div class="p-3 bg-white rounded-2xl max-w-[200px] mx-auto mb-5 shadow-inner">
+            <div class="p-2.5 sm:p-3 bg-white rounded-xl sm:rounded-2xl max-w-[180px] sm:max-w-[200px] mx-auto mb-4 sm:mb-5 shadow-inner">
                 <img src="assets/QR.png" alt="QR Code para Download" class="w-full h-auto object-contain">
             </div>
 
